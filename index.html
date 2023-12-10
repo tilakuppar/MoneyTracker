@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="list.js"></script>
+    <title>Money Tracker</title>
+</head>
+
+<body>
+    <div class="head">
+        <h1 class="d-flex justify-content-center bg-light py-3" id="title">
+            Money Tracker
+        </h1>
+    </div>
+    <div class="body_section d-flex justify-content-center text-align-center">
+        <div class="main input_container container text-light py-3">
+            <div class="total_balance">
+                <strong id="total_balance">Total Balanace : ₹ 0.0</strong>
+            </div>
+            <hr />
+
+            <div class="inc_exp d-flex justify-content-around align-items center mt-4 px-5">
+                <div class="income px-3 pt-2 pb-2" onclick=income()>
+                    <p class="text-light font-weight-bold">Income</p>
+                    <strong id="inc_amt">₹ 0.0</strong>
+                </div>
+
+                <div class="expense px-3 pt-2 pb-2" onclick=expense()>
+                    <p class="text-light font-weight-bold">Expense</p>
+                    <strong id="exp_amt">₹ 0.0</strong>
+                </div>
+            </div>
+
+            <div class="form_container mt-5">
+                <form method="post" action="/transaction">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control form-control-sm" id="description" name="description"
+                            placeholder="Enter Description" required autocomplete="off"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="number" class="form-control form-control-sm" id="amount" name="amount" 
+                            placeholder="Enter Amount" required autocomplete="off"/>
+                    </div>
+                    <div class="submit d-flex justify-content-center align-items-center">
+                        <button type="submit" class="btn btn-primary mt-3" onsubmit="transaction(events)">
+                            Save Transaction
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="transaction_container main container text-light py-3"> 
+            <div class="list_title d-flex justify-content-center align-items-center">
+                <p class="font-weight-bold" id="list_head">Transaction Details :</p>          
+            </div>
+            <ul class="list">
+                <!--<li class="checked">Groceries: ₹ 5000.00</li>-->
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
