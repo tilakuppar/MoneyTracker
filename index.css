@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ebebeb;
+}
+
+#title{
+    color: rgb(248, 134, 53);
+    font-family: 'Play', sans-serif;
+}
+.main {
+    width: 30%;
+    height: 70vh;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color: rgb(18 18 18);
+    overflow: hidden;
+}
+.input_container{
+    margin-left: 19%;
+}
+hr{
+    background-color: white;
+}
+.income{
+    border: 3px solid green;
+    width: 110px;
+    height: 90px;
+    text-align: center;
+    font-family: sans-serif;
+    overflow: scroll;
+    cursor: pointer;
+}
+.income:hover{
+    background-color: rgba(0, 128, 0, 0.253);
+}
+.expense{
+    border: 3px solid rgba(255, 0, 0, 0.842);
+    width: 110px;
+    height: 90px;
+    text-align: center;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.expense:hover{
+    background-color: rgba(255, 0, 0, 0.253);
+}
+.total_balance strong{
+    font-family: monospace;
+    font-size: larger;
+}
+form{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.transaction_container{
+    margin-right: 19%;
+    overflow: scroll;
+}
+.transaction_container::-webkit-scrollbar {
+    display: none;
+}
+ul{
+    list-style-type: none;
+    background-color: rgba(255, 255, 255, 0.788);
+    color: black;
+    width: 100%;
+    border-radius: 5px;
+}
+ul li{
+    font-family: sans-serif;
+    padding: 5px 10px;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+}
+ul li i{
+    float: right;
+    color: black;
+    margin-top: 3px ;
+    cursor: pointer;
+}
+.income::-webkit-scrollbar {
+    display: none;
+}
+.expense::-webkit-scrollbar {
+    display: none;
+}
+#list_head{
+    font-family:sans-serif;
+}
